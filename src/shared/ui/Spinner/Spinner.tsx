@@ -1,14 +1,21 @@
-import "./Spinner.scss"
-import {classNames} from "shared/lib/classNames/classNames"
+import './Spinner.scss';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 export interface SpinnerProps {
 className?: string;
 }
 
-export const Spinner = ({className}:SpinnerProps)=>  {
-  return (
+export const Spinner = ({ className }:SpinnerProps) => (
     <div className={classNames('', {}, [className])}>
-    <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-  </div>
-  )
-};
+        <div className="lds-roller">
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+        </div>
+    </div>
+);
