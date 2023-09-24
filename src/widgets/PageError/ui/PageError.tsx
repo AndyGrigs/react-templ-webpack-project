@@ -3,14 +3,15 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './PageError.module.scss';
 
 export interface PageErrorProps {
-className?: string;
+    className?: string;
 }
 
 const reloadWindow = () => {
-    location.reload()
-}
+    // eslint-disable-next-line no-restricted-globals
+    location.reload();
+};
 
-export const PageError = ({ className }:PageErrorProps) => {
+export const PageError = ({ className }: PageErrorProps) => {
     const { t } = useTranslation();
     return (
         <div className={classNames(cls.PageError, {}, [className])}>

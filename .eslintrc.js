@@ -37,12 +37,17 @@ module.exports = {
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
+        // eslint-disable-next-line no-dupe-keys
+        'react/jsx-indent': 'off',
+        ' react/jsx-closing-tag-location': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
-        'max-len': ['error', { ignoreComments: true }],
+        'max-len': ['error', { ignoreComments: true }, { code: 200 }],
+        'react/button-has-type': 'off',
+        'linebreak-style': 'off',
     },
     globals: {
         __IS_DEV__: true,

@@ -25,9 +25,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
     render() {
         if (this.state.hasError) {
-            return (<Suspense fallback="">
-                         <PageError/>
-                    </Suspense>)
+            return (
+                <Suspense fallback="">
+                    <PageError />
+                </Suspense>
+            );
         }
 
         return this.props.children;

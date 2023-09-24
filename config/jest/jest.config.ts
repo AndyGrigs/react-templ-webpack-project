@@ -30,11 +30,19 @@ export default {
     moduleDirectories: [
         'node_modules',
     ],
+    modulePath: [
+        '<rootDir>src',
+    ],
     testMatch: [
         // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
     rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '^shared/(.*)$': '<rootDir>/src/shared/$1',
+        '\\.s?css$': 'identity-obj-proxy',
+    },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -78,7 +86,6 @@ export default {
     // A set of global variables that need to be available in all test environments
     // globals: {},
 
-    // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g. maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number. maxWorkers: 2 will use a maximum of 2 workers.
     // maxWorkers: "50%",
 
     // An array of directory names to be searched recursively up from the requiring module's location
