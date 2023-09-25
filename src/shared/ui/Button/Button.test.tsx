@@ -8,6 +8,7 @@ describe('Button', () => {
         expect(screen.getByText('test')).toBeInTheDocument();
     });
 });
+
 describe('Test clear theme', () => {
     test('with only first param', () => {
         render(<Button theme={ThemeButton.CLEAR}>test</Button>);
